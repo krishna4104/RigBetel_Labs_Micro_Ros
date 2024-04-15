@@ -43,7 +43,7 @@ String string_value
 > * Adding directly folders that contain ROS 2 packages
 > * Adding an entry to [this file](https://github.com/micro-ROS/micro_ros_arduino/blob/foxy/extras/library_generation/extra_packages/extra_packages.repos), you can see a sample of this kind of files [here](https://github.com/micro-ROS/micro_ros_setup/blob/foxy/config/agent_uros_packages.repos). This option allows you to automatically download a Git repo every time the library is built.
 > 
-> _If the packages that you are going to add are standard enough, maybe we can add them to this repo [extra_packages.repos](https://github.com/micro-ROS/micro_ros_arduino/blob/foxy/extras/library_generation/extra_packages/extra_packages.repos). Let me know._
+> _If the packages that you are going to add are standard enough, maybe we can add them to this repo [extra_packages.repos](https://github.com/micro-ROS/micro_ros_arduino/blob/foxy/extras/library_generation/extra_packages/extra_packages.repos). 
 > 
 > ## Rebuilding your own version of the micro-ROS library for Arduino
 > Now we are going to use docker to build our custom version of the library. In this case, this custom version of the library will have the extra msg that you just have included, but for example, is also possible to modify the configuration of the micro-ROS layers by customizing some of the [.meta files](https://github.com/micro-ROS/micro_ros_arduino/blob/foxy/extras/library_generation/colcon.meta).
