@@ -10,7 +10,7 @@ String string_value
 > 
 > ```shell
 > # Go to this library folder installation
-> cd ~/Arduino/libraries/micro_ros_arduino-0.0.1(Whatever ur version is)
+> cd ~/Arduino/libraries/micro_ros_arduino-0.0.1
 > 
 > # Go to the extra_packages folder and create there you new msg package:
 > pushd extras/library_generation/extra_packages
@@ -54,35 +54,15 @@ String string_value
 > 
 > # Use the docker to build all the necessary stuff:
 > docker pull microros/micro_ros_arduino_builder:latest
-> docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:latest
+> docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:humble
 > ```
 > 
-> I have added some new parameters to the docker script so if you use it like above it will build for all the supported platforms and it will take longer.
+>
 > 
 > If you want to build just for your platform, use:
 > 
 > ```shell
 > docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:humble
-> ```
-> 
-> So, supposing that you have run the last command, building just for your `teensy3` and with your `my_custom_message` added, your library folder should look like:
-> 
-> ```shell
-> pgarrido@pgarrido:~/Arduino/libraries/micro_ros_arduino-0.0.1$ git status
-> On branch foxy
-> Your branch is up to date with 'origin/foxy'.
-> 
-> Changes not staged for commit:
->         modified:   available_ros2_types
->         modified:   built_packages
->         deleted:    src/cortex-m7/fpv5-sp-d16-softfp/libmicroros.a
->         deleted:    src/imxrt1062/fpv5-d16-hard/libmicroros.a
->         modified:   src/mk20dx256/libmicroros.a
->         modified:   src/rmw_microxrcedds_c/config.h
-> 
-> Untracked files:
->         extras/library_generation/extra_packages/my_custom_message/
->         src/my_custom_message/
 > ```
 > 
 
