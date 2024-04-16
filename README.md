@@ -1,4 +1,4 @@
-Create a data type that looks like the following and name rbl_message
+Create a data type that looks like the following and name my_custom_message
 ```
 │   my_custom_message
 │       ├── bool bool_value
