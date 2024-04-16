@@ -5,7 +5,7 @@ int8 integer_value
 float float_value
 String string_value
 
-> ## Adding a new package to the build system
+> ## Adding a custon message as a new package to the build system
 > First, we are going to create a new package, I assume that you have a ROS 2 Humble installation in your computer (let me know if not):
 > 
 > ```shell
