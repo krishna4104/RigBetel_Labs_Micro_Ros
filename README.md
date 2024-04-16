@@ -55,9 +55,8 @@ Now we are going to use docker to build our custom version of the library. In th
 > If you want to build just for your platform, use:
 > 
 > ```shell
-> docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:humble
+> docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_static_library_builder:humble
 > ```
-> 
 Then upload the 'Arduino code'
 
 Start the Micro ROS agent 
