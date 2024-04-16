@@ -6,7 +6,7 @@ float float_value
 String string_value
 
 > ## Adding a new package to the build system
-> First, we are going to create a new package, I assume that you have a ROS 2 Foxy installation in your computer (let me know if not):
+> First, we are going to create a new package, I assume that you have a ROS 2 Humble installation in your computer (let me know if not):
 > 
 > ```shell
 > # Go to this library folder installation
@@ -20,7 +20,7 @@ String string_value
 > [...]
 > ```
 > 
-> At the end of this procedure you should have your custom message inside the folder:
+> At the end of this procedure you should have custom message inside the folder:
 > 
 > ```shell
 > extras/library_generation/
@@ -53,20 +53,21 @@ String string_value
 > cd ~/Arduino/libraries/micro_ros_arduino-0.0.1
 > 
 > # Use the docker to build all the necessary stuff:
-> docker pull microros/micro_ros_arduino_builder:latest
+> docker pull microros/micro_ros_arduino_builder:humble
 > docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:humble
 > ```
-> 
->
-> 
 > If you want to build just for your platform, use:
 > 
 > ```shell
 > docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:humble
 > ```
 > 
+Then upload the arduino code.
 
-
-
+Start the Micro ROS agent 
+```
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
+```
+Then echo the topic "/micro_ros_arduino_node_publisher" to see whether the topic is being published or not.
 
 ![image](https://github.com/krishna4104/RigBetel_Labs_Micro_Ros/assets/140909916/0de66791-aa81-4839-8f9a-a415a909f042)
