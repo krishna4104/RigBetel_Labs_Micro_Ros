@@ -1,10 +1,11 @@
 Create a data type that looks like the following and name rbl_message
+```
 │   my_custom_message
 │       ├── bool bool_value
 │       ├── int8 integer_value
 │       │── float float_value
 │       ├── String string_value
-
+```
 > ## Adding a custom message as a new package to the build system
 > First, we are going to create a new package, I assume that you have a ROS 2 Humble installation in your computer (let me know if not):
 > 
