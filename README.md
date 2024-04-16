@@ -69,5 +69,7 @@ Start the Micro ROS agent
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
 ```
 Then echo the topic "/micro_ros_arduino_node_publisher" to see whether the topic is being published or not.
-
+```
+ros2 topic echo /micro_ros_arduino_node_publisher 
+```
 ![image](https://github.com/krishna4104/RigBetel_Labs_Micro_Ros/assets/140909916/0de66791-aa81-4839-8f9a-a415a909f042)
